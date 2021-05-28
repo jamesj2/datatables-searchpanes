@@ -1,11 +1,11 @@
-## Example of DataTables Upload Many issue with dbClean()
+## Example of DataTables Searchpanes null issue.
 
-When using dbClean with the tableField parameter it causes images to be removed with field validation fails.
+Using search panes with null values.  The server side search doesn't work properly.
 
 A copy of the editor library with bootstrap 4 is required.  Please download and place it in the root and name it Editor-PHP.zip.
 
-Run the following;
- 
+Run the following:
+
 ```shell script
 cp .env.example .env
 touch database/database.sqlite
@@ -19,14 +19,6 @@ php artisan serve
 
 Then open http://localhost:8000.  Follow the steps below to recreate issue.  
 
-* edit an entry
-* upload image
-* clear the name field
-* click submit
-* enter a name
-* click submit
-* reopen edit to verify image has been removed
-
-See app/Http/Controllers/Datatable/UploadManyController.php @ line 115
+* click the "null" option in the search pane and verify there are no matching records found
 
 
